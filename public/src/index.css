@@ -90,7 +90,7 @@
     left: 0%;
 }
 
-.bayonetta{
+.bannerImg{
     width: 100%;
 }
 
@@ -142,13 +142,33 @@
 .featBannerInfo{
     width: 66%;
     margin-top: 1%;
-}
-
-.marioDay{
-    width: 100%;
+    margin-bottom: 1%;
 }
 
 .featBannerDiv{
+    display: flex;
+    align-items: center;
+}
+
+/*ONLINE STORE***************************************************************************/
+
+.onlineStore{
+    width: 100%;
+    margin-top: 80.5%;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.onlineBannerInfo{
+    width: 66%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.onlineBannerDiv{
     display: flex;
     align-items: center;
 }
