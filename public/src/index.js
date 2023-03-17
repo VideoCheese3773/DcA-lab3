@@ -1,6 +1,11 @@
 //main index
 import * as modules from "./components/index.js";
 import featData from "./components/Featured/featuredData.js";
+import bigNewsData from "./components/News/bigNewsData.js";
+import smallNewsData from "./components/News/smallNewsData.js";
+import charData from "./components/Characters/charactersData.js";
+import digitalData from "./components/Digital/digitalData.js";
+
 class AppContainter extends HTMLElement {
     constructor() {
         super();
@@ -11,13 +16,23 @@ class AppContainter extends HTMLElement {
 
     attributeChangedCallback(propname, oldvalue, newvalue) {
         this[propname] = newvalue;
-        let featuredHTML = this.getFeatured();
-        this.render(featuredHTML);
+        this.render();
     }
 
     connectedCallback() {
-        let featuredHTML = this.getFeatured();
-        this.render(featuredHTML);
+        let components = this.getComponents();
+        this.render(components);
+    }
+
+    getComponents() {
+        let components = [];
+        components.push(this.getFeatured());
+        components.push(this.getBigNews());
+        components.push(this.getSmallNews());
+        components.push(this.getCharacters());
+        components.push(this.getDigital());
+        console.log(components);
+        return components
     }
 
     getFeatured() {
@@ -27,20 +42,50 @@ class AppContainter extends HTMLElement {
                 <app-featured img="${info.img}" text="${info.text}"></app-featured>
             `;
         })
-        return featuredHTML
+        return featuredHTML;
     }
 
-    getFeatured() {
-        let featuredHTML = ""
-        featData.forEach((info) => {
-            featuredHTML += `
-                <app-featured img="${info.img}" text="${info.text}"></app-featured>
+    getBigNews() {
+        let bigNewsHTML = ""
+        bigNewsData.forEach((info) => {
+            bigNewsHTML += `
+                <app-bignews img="${info.img}" date="${info.date}" title="${info.title}" text="${info.text}"></app-bignews>
             `;
         })
-        return featuredHTML
+        return bigNewsHTML;
     }
 
-    render(featuredHTML) {
+    getSmallNews() {
+        let smallNewsHTML = ""
+        smallNewsData.forEach((info) => {
+            smallNewsHTML += `
+                <app-smallnews img="${info.img}" date="${info.date}" title="${info.title}"></app-smallnews>
+            `;
+        })
+        return smallNewsHTML;
+    }
+
+    getCharacters() {
+        let charactersHTML = ""
+        charData.forEach((info) => {
+            charactersHTML += `
+                <app-digital img="${info.img}" name="${info.name}"></app-smallnews>
+            `;
+        })
+        return charactersHTML;
+    }
+
+    getDigital() {
+        let digitalHTML = ""
+        digitalData.forEach((info) => {
+            digitalHTML += `
+                <app-digital img="${info.img}" title="${info.title}" date="${info.date}" price="${info.price}"></app-digital>
+            `;
+        })
+        return digitalHTML;
+    }
+
+    render(components) {
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./src/index.css">
 
@@ -142,7 +187,7 @@ class AppContainter extends HTMLElement {
                 <button class="leftButton"><strong>Shop now</strong></button>
             </div>
             <div class="bannerComponent">
-                ${featuredHTML}
+                ${components[0]}
             </div>
         </div>
         <div class="divider"></div>
@@ -180,10 +225,10 @@ class AppContainter extends HTMLElement {
         <div class="newsBannerInfo">
             <p class="leftText"><strong>News</strong></p>
             <div class="bigNews">
-
+                ${components[1]}
             </div>
             <div class="smallNews">
-
+                ${components[2]}
             </div>
             <button class="leftButtonMod"><img src="./src/img/newsW.png" class="navIcon"><strong>See All News Articles</strong></button>
         </div>
@@ -195,7 +240,7 @@ class AppContainter extends HTMLElement {
         <div class="charactersBannerInfo">
             <p class="leftText"><strong>Characters</strong></p>
             <div class="charactersDiv">
-
+                ${components[3]}
             </div>
         </div>
         <div class="divider"></div>
@@ -206,11 +251,11 @@ class AppContainter extends HTMLElement {
         <div class="digitalBannerInfo">
             <p class="leftText"><strong>Digital Best Sellers</strong></p>
             <div class="digitalDiv">
-
+                ${components[4]}
             </div>
             <p class="leftText"><strong>Digital New Releases</strong></p>
             <div class="digitalDiv">
-
+                ${components[4]}
             </div>
         </div>
         <div class="divider"></div>
