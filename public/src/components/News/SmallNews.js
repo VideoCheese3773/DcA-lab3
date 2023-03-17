@@ -24,9 +24,9 @@ class SmallNews extends HTMLElement {
         <link rel="stylesheet" href="./src/components/News/News.css">
         <section class="smallNewsItem">
             <img src="${this.img}" class="smallNewsImg">
-            <p class="bigNewsText">${this.date}</p>
-            <p class="bigNewsName">${this.name}</p>
-            <p class="bigNewsText">Read More</p>
+            <p class="smallNewsText">${this.date}</p>
+            <p class="smallNewsText">${this.name}</p>
+            <p class="smallNewsText">Read More</p>
         </section>
         `;
     }

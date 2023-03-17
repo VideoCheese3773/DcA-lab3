@@ -69,7 +69,7 @@ class AppContainter extends HTMLElement {
         let charactersHTML = ""
         charData.forEach((info) => {
             charactersHTML += `
-                <app-digital img="${info.img}" name="${info.name}"></app-smallnews>
+                <app-characters img="${info.img}" name="${info.name}"></app-characters>
             `;
         })
         return charactersHTML;

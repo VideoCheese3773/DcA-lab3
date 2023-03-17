@@ -21,13 +21,13 @@ class Digital extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/Featured/Featured.css">
-        <section class="featuredItem">
-            <img src="${this.img}" class="featuredImg">
-            <p class="featuredText">${this.name}</p>
-            <p class="featuredText">${this.date}</p>
-            <p class="featuredText">${this.price}</p>
-            <p class="featuredText">Nintendo Switch</p>
+        <link rel="stylesheet" href="./src/components/Digital/Digital.css">
+        <section class="digitalItem">
+            <img src="${this.img}" class="digitalImg">
+            <p class="digitalText">${this.name}</p>
+            <p class="digitalText">${this.date}</p>
+            <p class="digitalText">${this.price}</p>
+            <p class="digitalText">Nintendo Switch</p>
         </section>
         `;
     }

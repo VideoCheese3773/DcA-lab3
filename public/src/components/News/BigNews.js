@@ -26,7 +26,7 @@ class BigNews extends HTMLElement {
         <section class="bigNewsItem">
             <img src="${this.img}" class="bigNewsImg">
             <p class="bigNewsText">${this.date}</p>
-            <p class="bigNewsName">${this.name}</p>
+            <p class="bigNewsText">${this.name}</p>
             <p class="bigNewsText">${this.text}</p>
             <p class="bigNewsText">Read More</p>
         </section>
