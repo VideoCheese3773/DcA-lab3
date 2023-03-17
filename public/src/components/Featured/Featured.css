@@ -1,0 +1,20 @@
+.featuredItem{
+    height: 250px;
+    width: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    background-color:rgb(212, 212, 212);
+}
+
+.featuredImg{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.featuredText{
+    width: fit-content;
+    font-size: 20px;
+}

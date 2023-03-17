@@ -21,16 +21,14 @@ class Featured extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/Profile/Profile.css">
-        <section class="appProfile">
-            <h1>${this.name}</h1>
-            <h2>${this.company}</h2>
-            <p>${this.email}</p>
-            <p>${this.city}</p>
-            </section>
+        <link rel="stylesheet" href="./src/components/Featured/Featured.css">
+        <section class="featuredItem">
+            <img src="${this.img}" class="featuredImg">
+            <p class="featuredText">${this.text}</p>
+        </section>
         `;
     }
 }
 
-customElements.define("featured", Featured);
+customElements.define("app-featured", Featured);
 export default Featured;

@@ -1,24 +1,49 @@
 //main index
 import * as modules from "./components/index.js";
-//import data from "./data.js";
+import featData from "./components/Featured/featuredData.js";
 class AppContainter extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: "open" });
+        this.attachShadow({
+            mode: "open"
+        });
     }
 
     attributeChangedCallback(propname, oldvalue, newvalue) {
         this[propname] = newvalue;
-        this.render();
+        let featuredHTML = this.getFeatured();
+        this.render(featuredHTML);
     }
 
     connectedCallback() {
-        this.render();
+        let featuredHTML = this.getFeatured();
+        this.render(featuredHTML);
     }
 
-    render() {
+    getFeatured() {
+        let featuredHTML = ""
+        featData.forEach((info) => {
+            featuredHTML += `
+                <app-featured img="${info.img}" text="${info.text}"></app-featured>
+            `;
+        })
+        return featuredHTML
+    }
+
+    getFeatured() {
+        let featuredHTML = ""
+        featData.forEach((info) => {
+            featuredHTML += `
+                <app-featured img="${info.img}" text="${info.text}"></app-featured>
+            `;
+        })
+        return featuredHTML
+    }
+
+    render(featuredHTML) {
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./src/index.css">
+
         <section class="navBar">
         <div class="topBar">
 
@@ -34,7 +59,6 @@ class AppContainter extends HTMLElement {
                         <img src="./src/img/downArrow.png" class="navIcon">
                     </div>
                 </div>
-
             </div>
 
             <div class="rightSide">
@@ -55,7 +79,6 @@ class AppContainter extends HTMLElement {
                     <p class="itemText">Log in / Sign up</p>
                 </div>
             </div>
-
         </div>
         <div class="divider"></div>
 
@@ -91,8 +114,8 @@ class AppContainter extends HTMLElement {
             </div>
         </div>
         <div class="divider"></div>
-
     </section>
+
 
     <section class="banner">
         <img src="./src/img/bayonetta.png" class="bannerImg">
@@ -109,8 +132,8 @@ class AppContainter extends HTMLElement {
         <div class="divider"></div>
     </section>
 
+
     <section class="featured">
-        <!--Here goes the module list-->
         <div class="featBannerInfo">
             <p class="leftText"><strong>Featured</strong></p>
             <img src="./src/img/marioDay.png" class="bannerImg">
@@ -118,10 +141,13 @@ class AppContainter extends HTMLElement {
                 <p class="leftText">Save through 3/23 at 11:59 p.m. PT</p>
                 <button class="leftButton"><strong>Shop now</strong></button>
             </div>
+            <div class="bannerComponent">
+                ${featuredHTML}
+            </div>
         </div>
-        <!--Here goes the module list-->
         <div class="divider"></div>
     </section>
+
 
     <section class="onlineStore">
         <div class="onlineBannerInfo">
@@ -136,6 +162,7 @@ class AppContainter extends HTMLElement {
         <div class="divider"></div>
     </section>
 
+
     <section class="gamingSystems">
         <div class="gamingBannerInfo">
             <p class="leftText"><strong>Gaming Systems</strong></p>
@@ -147,6 +174,7 @@ class AppContainter extends HTMLElement {
         </div>
         <div class="divider"></div>
     </section>
+
 
     <section class="news">
         <div class="newsBannerInfo">
@@ -162,6 +190,7 @@ class AppContainter extends HTMLElement {
         <div class="divider"></div>
     </section>
 
+
     <section class="characters">
         <div class="charactersBannerInfo">
             <p class="leftText"><strong>Characters</strong></p>
@@ -171,6 +200,7 @@ class AppContainter extends HTMLElement {
         </div>
         <div class="divider"></div>
     </section>
+
 
     <section class="digital">
         <div class="digitalBannerInfo">
@@ -186,11 +216,10 @@ class AppContainter extends HTMLElement {
         <div class="divider"></div>
     </section>
 
+
     <section class="footer">
         <img src="./src/img/nintendo.png" class="footerImg">
     </section>
-
-
         `
     }
 }

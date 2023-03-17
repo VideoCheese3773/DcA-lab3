@@ -12,7 +12,7 @@ const featData = [
         text: "Check out games featuring Mario and friends!"
     },
     {
-        img: "./src/img/f3.avif",
+        img: "./src/img/f4.avif",
         text: "Mario Kart 8 Deluxe DLC Wave 4-Available now"
     }
 ]

@@ -145,10 +145,15 @@
     align-items: center;
 }
 
+.bannerComponent{
+    display: flex;
+    justify-content: center;
+}
+
 /*ONLINE STORE***************************************************************************/
 .onlineStore{
     width: 100%;
-    margin-top: 80.5%;
+    margin-top: 94.5%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -170,7 +175,7 @@
 /*GAMING SYSTEMS*************************************************************************/
 .gamingSystems{
     width: 100%;
-    margin-top: 101.9%;
+    margin-top: 114.9%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -192,7 +197,7 @@
 /*NEWS***********************************************************************************/
 .news{
     width: 100%;
-    margin-top: 133.6%;
+    margin-top: 145.6%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -233,7 +238,7 @@
 /*CHARACTERS*****************************************************************************/
 .characters{
     width: 100%;
-    margin-top: 143.6%;
+    margin-top: 153.6%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -255,7 +260,7 @@
 /*DIGITAL********************************************************************************/
 .digital{
     width: 100%;
-    margin-top: 149.6%;
+    margin-top: 159.6%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -280,7 +285,7 @@
     left: 0%;
     width: 100%;
     height: 150px;
-    margin-top: 170%;
+    margin-top: 180%;
     background-color: rgb(222, 0, 0);
 }
 
