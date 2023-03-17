@@ -238,7 +238,7 @@
 /*CHARACTERS*****************************************************************************/
 .characters{
     width: 100%;
-    margin-top: 203.6%;
+    margin-top: 205.6%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -260,7 +260,7 @@
 /*DIGITAL********************************************************************************/
 .digital{
     width: 100%;
-    margin-top: 226.6%;
+    margin-top: 227.6%;
     position: absolute;
     left: 0%;
     display: flex;
@@ -285,7 +285,7 @@
     left: 0%;
     width: 100%;
     height: 150px;
-    margin-top: 282.5%;
+    margin-top: 283.5%;
     background-color: rgb(222, 0, 0);
 }
 
