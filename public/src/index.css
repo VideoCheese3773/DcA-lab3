@@ -1,3 +1,4 @@
+/*GENERAL********************************************************************************/
 .appContainer{
     width: 100%;
     height: 100%;
@@ -16,6 +17,7 @@
     position: absolute;
     left: 0%;
     top: 0%;
+    background-color: aliceblue;
     /*z-index: 1;*/
 }
 
@@ -34,10 +36,12 @@
 
 .leftSide{
     display: flex;
+    align-items: center;
 }
 
 .rightSide{
     display: flex;
+    align-items: center;
 }
 
 .nintendoLogo{
@@ -77,21 +81,47 @@
     background-color: rgb(146, 146, 146);
 }
 
-/*Bayonetta******************************************************************************/
-
-.protoNavBar{
-    height: 150px;
-}
+/*BAYONETTA******************************************************************************/
 
 .banner{
     width: 100%;
-    left: -0%;
-    top: 10%;
-    /*z-index: -1;*/
-    background-color: blueviolet;
+    margin-top: 5.2%;
+    position: absolute;
+    left: 0%;
 }
 
-.banner{
+.bayonetta{
     width: 100%;
-    height: auto;
+}
+
+.bannerInfo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.leftText{
+    font-size: 25px;
+    color: rgb(85, 85, 85);
+}
+
+.leftButton{
+    background-color: rgb(255, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 60px;
+    margin-left: 15px;
+}
+
+.esrb{
+    height: 70px;
+}
+
+.rightText{
+    margin-left: 15px;
+    font-size: 15px;
+    color: rgb(146, 146, 146);
 }
