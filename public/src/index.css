@@ -194,7 +194,7 @@
     align-items: center;
 }
 
-/****************************************************************************************/
+/*NEWS***********************************************************************************/
 .news{
     width: 100%;
     margin-top: 133.6%;
@@ -233,4 +233,48 @@
     padding-right: 15px;
     display: flex;
     align-items: center;
+}
+
+/*CHARACTERS*****************************************************************************/
+.characters{
+    width: 100%;
+    margin-top: 143.6%;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.charactersBannerInfo{
+    width: 66%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.charactersDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*DIGITAL********************************************************************************/
+.digital{
+    width: 100%;
+    margin-top: 149.6%;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digitalBannerInfo{
+    width: 66%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.digitalDiv{
+    display: flex;
+    justify-content: space-between;
 }
