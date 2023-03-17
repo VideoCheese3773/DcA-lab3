@@ -1,6 +1,6 @@
 class BigNews extends HTMLElement {
     static get observedAttributes() {
-        return ["img", "date", "title", "text"];
+        return ["img", "date", "name", "text"];
     }
 
     constructor() {
@@ -11,6 +11,7 @@ class BigNews extends HTMLElement {
     }
 
     attributeChangedCallback(propName, oldValue, newValue) {
+        console.log("newValue", newValue)
         this[propName] = newValue;
         this.render();
     }
@@ -25,7 +26,7 @@ class BigNews extends HTMLElement {
         <section class="bigNewsItem">
             <img src="${this.img}" class="bigNewsImg">
             <p class="bigNewsText">${this.date}</p>
-            <p class="bigNewsTitle">${this.title}</p>
+            <p class="bigNewsName">${this.name}</p>
             <p class="bigNewsText">${this.text}</p>
             <p class="bigNewsText">Read More</p>
         </section>

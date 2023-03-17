@@ -1,6 +1,6 @@
 class SmallNews extends HTMLElement {
     static get observedAttributes() {
-        return ["img", "date", "title"];
+        return ["img", "date", "name"];
     }
 
     constructor() {
@@ -25,7 +25,7 @@ class SmallNews extends HTMLElement {
         <section class="smallNewsItem">
             <img src="${this.img}" class="smallNewsImg">
             <p class="bigNewsText">${this.date}</p>
-            <p class="bigNewsTitle">${this.title}</p>
+            <p class="bigNewsName">${this.name}</p>
             <p class="bigNewsText">Read More</p>
         </section>
         `;

@@ -49,7 +49,7 @@ class AppContainter extends HTMLElement {
         let bigNewsHTML = ""
         bigNewsData.forEach((info) => {
             bigNewsHTML += `
-                <app-bignews img="${info.img}" date="${info.date}" title="${info.title}" text="${info.text}"></app-bignews>
+                <app-bignews img="${info.img}" date="${info.date}" name="${info.name}" text="${info.text}"></app-bignews>
             `;
         })
         return bigNewsHTML;
@@ -59,7 +59,7 @@ class AppContainter extends HTMLElement {
         let smallNewsHTML = ""
         smallNewsData.forEach((info) => {
             smallNewsHTML += `
-                <app-smallnews img="${info.img}" date="${info.date}" title="${info.title}"></app-smallnews>
+                <app-smallnews img="${info.img}" date="${info.date}" name="${info.name}"></app-smallnews>
             `;
         })
         return smallNewsHTML;
@@ -79,7 +79,7 @@ class AppContainter extends HTMLElement {
         let digitalHTML = ""
         digitalData.forEach((info) => {
             digitalHTML += `
-                <app-digital img="${info.img}" title="${info.title}" date="${info.date}" price="${info.price}"></app-digital>
+                <app-digital img="${info.img}" name="${info.name}" date="${info.date}" price="${info.price}"></app-digital>
             `;
         })
         return digitalHTML;

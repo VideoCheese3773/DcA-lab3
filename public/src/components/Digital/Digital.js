@@ -1,6 +1,6 @@
 class Digital extends HTMLElement {
     static get observedAttributes() {
-        return ["img", "text"];
+        return ["img", "name", "date", "price"];
     }
 
     constructor() {
@@ -24,7 +24,7 @@ class Digital extends HTMLElement {
         <link rel="stylesheet" href="./src/components/Featured/Featured.css">
         <section class="featuredItem">
             <img src="${this.img}" class="featuredImg">
-            <p class="featuredText">${this.title}</p>
+            <p class="featuredText">${this.name}</p>
             <p class="featuredText">${this.date}</p>
             <p class="featuredText">${this.price}</p>
             <p class="featuredText">Nintendo Switch</p>
