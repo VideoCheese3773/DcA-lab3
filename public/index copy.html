@@ -1,25 +1,19 @@
-//main index
-import * as modules from "./components/index.js";
-//import data from "./data.js";
-class AppContainter extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: "open" });
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    attributeChangedCallback(propname, oldvalue, newvalue) {
-        this[propname] = newvalue;
-        this.render();
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo</title>
+</head>
 
-    connectedCallback() {
-        this.render();
-    }
+<body>
+    <app-container class="appContainer"></app-container>
 
-    render() {
-        this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/index.css">
-        <section class="navBar">
+    <link rel="stylesheet" href="./src/index.css">
+
+    <section class="navBar">
         <div class="topBar">
 
             <div class="leftSide">
@@ -190,9 +184,7 @@ class AppContainter extends HTMLElement {
         <img src="./src/img/nintendo.png" class="footerImg">
     </section>
 
+    <script src="./src/index.js" type="module"></script>
+</body>
 
-        `
-    }
-}
-
-customElements.define("app-container", AppContainter);
+</html>
