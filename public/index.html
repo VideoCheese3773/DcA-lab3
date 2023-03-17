@@ -1,14 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nintendo</title>
-    <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
     <app-container class="appContainer"></app-container>
+
+    <link rel="stylesheet" href="./src/index.css">
+
+
+    <section class="navBar">
+        <div class="topBar">
+
+            <div class="leftSide">
+                <img src="./src/img/nintendo.png" class="nintendoLogo">
+                <div class="searchBar">
+                    <div class="navItem">
+                        <img src="./src/img/lupe.png" class="navIcon">
+                        <p>Search games, hardware, news, etc</p>
+                    </div>
+                    <div class="navItem categories">
+                        <p>All categories</p>
+                        <img src="./src/img/downArrow.png" class="navIcon">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rightSide">
+                <div class="navItem">
+                    <img src="./src/img/question.png" class="navIcon">
+                    <p class="itemText">Support</p>
+                </div>
+                <div class="navItem">
+                    <img src="./src/img/heart.png" class="navIcon">
+                    <p class="itemText">Wish List</p>
+                </div>
+                <div class="navItem">
+                    <img src="./src/img/cart.png" class="navIcon">
+                    <p class="itemText">Cart</p>
+                </div>
+                <div class="navItem lastItem">
+                    <img src="./src/img/user.png" class="navIcon">
+                    <p class="itemText">Log in / Sign up</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="divider"></div>
+
+        <div class="botBar">
+            <div class="navItem">
+                <img src="./src/img/cap.png" class="navIcon">
+                <p class="itemText">My Nintendo Store</p>
+                <img src="./src/img/downArrow.png" class="navIcon">
+            </div>
+
+            <div class="navItem">
+                <img src="./src/img/dpad.png" class="navIcon">
+                <p class="itemText">Games</p>
+                <img src="./src/img/downArrow.png" class="navIcon">
+            </div>
+
+            <div class="navItem">
+                <img src="./src/img/switch.png" class="navIcon">
+                <p class="itemText">Nintendo Switch</p>
+                <img src="./src/img/downArrow.png" class="navIcon">
+            </div>
+
+            <div class="navItem">
+                <img src="./src/img/news.png" class="navIcon">
+                <p class="itemText">News & Events</p>
+                <img src="./src/img/downArrow.png" class="navIcon">
+            </div>
+
+            <div class="navItem">
+                <img src="./src/img/star.png" class="navIcon">
+                <p class="itemText">Play Nintendo</p>
+                <img src="./src/img/downArrow.png" class="navIcon">
+            </div>
+        </div>
+        <div class="divider"></div>
+
+    </section>
+
+    <!--<div class="protoNavBar"></div>
+
+    <section class="bayonetta">
+        <img src="./src/img/bayonetta.png" class="banner">
+        <img src="./src/img/bayonetta.png" class="banner">
+    </section>-->
+
     <script src="./src/index.js" type="module"></script>
 </body>
+
 </html>

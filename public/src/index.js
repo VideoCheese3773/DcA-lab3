@@ -20,7 +20,7 @@ class AppContainter extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./src/index.css">
 
-        <p>bruh</p>
+
         `
     }
 }
