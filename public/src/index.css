@@ -1,3 +1,4 @@
+/****************************************************************************************/
 /*GENERAL********************************************************************************/
 .appContainer{
     width: 100%;
@@ -82,7 +83,6 @@
 }
 
 /*BAYONETTA******************************************************************************/
-
 .banner{
     width: 100%;
     margin-top: 5.2%;
@@ -114,6 +114,8 @@
     font-size: 20px;
     height: 60px;
     margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .esrb{
@@ -124,4 +126,29 @@
     margin-left: 15px;
     font-size: 15px;
     color: rgb(146, 146, 146);
+}
+
+/*FEATURED*******************************************************************************/
+.featured{
+    width: 100%;
+    margin-top: 49.85%;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featBannerInfo{
+    width: 66%;
+    margin-top: 1%;
+}
+
+.marioDay{
+    width: 100%;
+}
+
+.featBannerDiv{
+    display: flex;
+    align-items: center;
 }
